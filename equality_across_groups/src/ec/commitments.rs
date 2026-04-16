@@ -33,7 +33,9 @@ pub struct PointCommitment<G: SWPoint> {
 
 /// A pair of Pedersen commitment, one for each coordinate of an Elliptic curve point. Encapsulates the coordinates
 /// and randomness in each commitment as well.
-#[derive(Clone, PartialEq, Eq, Debug, Zeroize, ZeroizeOnDrop)]
+#[derive(
+    Clone, CanonicalDeserialize, CanonicalSerialize, PartialEq, Eq, Debug, Zeroize, ZeroizeOnDrop,
+)]
 pub struct PointCommitmentWithOpening<G: SWPoint> {
     /// `x` coordinate
     pub x: G::ScalarField,

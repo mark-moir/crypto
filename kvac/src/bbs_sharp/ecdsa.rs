@@ -4,6 +4,8 @@ use ark_secp256r1::{Affine, Fr, G_GENERATOR_X, G_GENERATOR_Y};
 use ark_std::{rand::RngCore, UniformRand, Zero};
 
 /// ECDSA signature
+use ark_serialize::{CanonicalDeserialize, CanonicalSerialize};
+#[derive(CanonicalDeserialize, CanonicalSerialize)]
 pub struct Signature {
     pub rand_x_coord: Fr,
     pub response: Fr,

@@ -1,0 +1,44 @@
+[package]
+name = "composable_committed_components"
+version = "0.1.0"
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+
+[dependencies]
+ark-bls12-381.workspace = true
+ark-ec.workspace = true
+ark-ff.workspace = true
+ark-secp256r1.workspace = true
+ark-serialize.workspace = true
+ark-std.workspace = true
+base64 = "0.22"
+bbs_plus = { version = "0.25.0", path = "../bbs_plus" }
+blake2.workspace = true
+bulletproofs_plus_plus = { version = "0.9.0", default-features = false, path = "../bulletproofs_plus_plus" }
+dock_crypto_utils = { version = "0.23.0", default-features = false, path = "../utils" }
+equality_across_groups = { version = "0.2.0", path = "../equality_across_groups" }
+once_cell = "1.17.0"
+proof_system = { version = "0.34.0", path = "../proof_system" }
+kvac = { version = "0.8.0", default-features = false, path = "../kvac" }
+rand_chacha = "0.3"
+rand_core = { version = "0.6", default-features = false }
+rayon = {workspace = true, optional = true}
+# ----- for REST API
+schemars = "0.8.21"
+serde = { version = "1", features = ["serde_derive"] }
+serde_json = "1"
+sha2 = "0.10.8"
+
+[dev-dependencies]
+ark-bls12-381.workspace = true
+proof_system = { version = "0.34.0", path = "../proof_system" }
+rmp-serde = "1.0"
+sha2 = {version = "0.10.8"}
+test_utils = { default-features = false, path = "../test_utils" }
+
+[features]
+default = ["parallel"]
+std = ["ark-ff/std", "ark-ec/std", "ark-std/std", "ark-serialize/std", "rand_core/std", "dock_crypto_utils/std", "bulletproofs_plus_plus/std", "kvac/std"]
+parallel = ["std", "ark-ff/parallel", "ark-ec/parallel", "ark-std/parallel", "rayon", "dock_crypto_utils/parallel", "bulletproofs_plus_plus/parallel", "kvac/parallel"]

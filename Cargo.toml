@@ -22,7 +22,8 @@ members = [
     "short_group_sig",
     "syra",
     "verifiable_encryption",
-    "equality_across_groups"
+    "equality_across_groups",
+    "composable_committed_components"
 ]
 resolver = "2"
 
