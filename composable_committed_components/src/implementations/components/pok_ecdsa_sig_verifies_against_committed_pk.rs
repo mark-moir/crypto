@@ -56,6 +56,7 @@ impl_api_roundtrip_ark!(ESVCPKProverArgs => ApiProveArgs);
 #[derive(Clone, CanonicalDeserialize, CanonicalSerialize)]
 pub struct ESVCPKProof {
     pub challenge_prover: Tom256Fr,
+    // Included only for debugging: enables asserting that prover and verifier get same challenge
     pub ptom_proof: PoKEcdsaSigCommittedPublicKey,
 }
 impl_api_roundtrip_ark!(ESVCPKProof => ApiComponentProof);
