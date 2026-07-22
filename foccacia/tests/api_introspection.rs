@@ -1,4 +1,4 @@
-use composable_committed_components::{
+use foccacia::{
     api::CCCGraphApi,
     example_graphs::{
         bbs_sd_dncps_plus_range_check_and_device_binding::{

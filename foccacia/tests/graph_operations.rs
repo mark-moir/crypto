@@ -1,4 +1,4 @@
-use composable_committed_components::{
+use foccacia::{
     implementations::{
         components::{
             bbs_sd_dncps::BbsSdDncpsCommitmentHandle,

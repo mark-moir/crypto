@@ -1,5 +1,5 @@
 use ark_bls12_381::Fr as BlsFr;
-use composable_committed_components::{
+use foccacia::{
     implementations::{
         components::range_check_bpp::{
             range_check_bpp_component, RangeCheckBppCommitArgs, RangeCheckBppCommonSetupArgs,

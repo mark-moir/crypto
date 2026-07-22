@@ -20,7 +20,7 @@ mod self_contained_tests {
 
         use bbs_plus::{prelude::KeypairG2, signature::SignatureG1};
 
-        use composable_committed_components::{
+        use foccacia::{
             bbs_sd_dncps::{
                 BbsSdDncpsCommitArgs, BbsSdDncpsCommonSetup, BbsSdDncpsCommonSetupArgs,
                 BbsSdDncpsProveArgs, BbsSdDncpsVerifyArgs,
@@ -186,7 +186,7 @@ mod tests {
     use std::collections::BTreeSet;
 
     use ark_bls12_381::Fr as BlsFr;
-    use composable_committed_components::{
+    use foccacia::{
         example_graphs::bbs_sd_dncps_with_device_binding::{
             BbsSdDncpsWithDeviceBinding, BbsSdDncpsWithDeviceBindingSetupArgs,
         },

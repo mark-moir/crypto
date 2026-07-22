@@ -24,7 +24,7 @@ use crate::{
 /// ```
 /// use std::collections::HashMap;
 /// use ark_bls12_381::Fr as BlsFr;
-/// use composable_committed_components::{
+/// use foccacia::{
 ///     api::SetupCCCGraph,
 ///     example_graphs::bbs_sd_dncps_plus_range_check_and_device_binding::{
 ///         BbsSdDncpsPlusRangeCheckAndDeviceBinding,
@@ -42,7 +42,7 @@ use crate::{
 ///     types::api_types::ToApi,
 ///     CCCGraphApi,
 /// };
-/// use composable_committed_components::utils::test_support::{
+/// use foccacia::utils::test_support::{
 ///     bbs_sd_dncps_setup_key_and_sig, ecdsa_setup_key_and_sig, esvcpk_common_setup_args, seed_from_str,
 /// };
 ///

@@ -1,6 +1,6 @@
 use std::collections::BTreeMap;
 
-use composable_committed_components::{
+use foccacia::{
     bbs_sd_dncps::*,
     equal_committed_values_tom256_bls12381::*,
     pok_ecdsa_sig_verifies_against_committed_pk::{ESVCPKCommitmentHandle::*, *},

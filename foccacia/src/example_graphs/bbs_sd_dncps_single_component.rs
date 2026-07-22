@@ -11,7 +11,7 @@ use crate::{
 /// Build the graph, commit three messages, selectively disclose one, and verify.
 ///
 /// ```
-/// use composable_committed_components::{
+/// use foccacia::{
 ///     api::SetupCCCGraph,
 ///     example_graphs::bbs_sd_dncps_single_component::{
 ///         BbsSdDncps, BbsSdDncpsSetupArgs,
