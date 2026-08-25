@@ -23,7 +23,7 @@ members = [
     "syra",
     "verifiable_encryption",
     "equality_across_groups",
-    "foccacia"
+    "focaccia"
 ]
 resolver = "2"
 
